@@ -9,6 +9,8 @@ RUN go build -o main .
 FROM alpine:latest
 WORKDIR /root/
 COPY --from=builder /app/main .
+RUN apk add --no-cache tzdata
+ENV TZ=Asia/Kolkata
 
 EXPOSE 8080
 CMD ["./main"]

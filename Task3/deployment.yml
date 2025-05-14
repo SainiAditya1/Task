@@ -17,3 +17,6 @@ spec:
         image: adityasaini10012001/datetime-app:latest
         ports:
         - containerPort: 8080
+        env:
+        - name: TZ
+          value: "Asia/Kolkata"
